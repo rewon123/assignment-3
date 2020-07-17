@@ -37,14 +37,14 @@ function tinyFriends(friendNames) {
 var smallestNumber = tinyFriends([22, 56, 88, 3, 88, 16,]);
 console.log(smallestNumber, 'is the tiniest friend');
 
-// //brickCalculator
+// brickCalculator
 function brickCalculator(floor) {
     var brickCount;
     if (floor <= 10) {
         brickCount = floor * 15 * 1000;
         return brickCount;
     }
-    brickCount = floor * 15 * 1000;
+    brickCount = 10 * 15 * 1000;
     if(floor > 10 ){
         if (floor < 20){
             const secondBuilding = floor - 10;
@@ -59,5 +59,5 @@ function brickCalculator(floor) {
      }
     return brickCount;
 }
-var test3 = brickCalculator(1);
+var test3 = brickCalculator(11);
 console.log(test3);
