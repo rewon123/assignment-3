@@ -24,18 +24,17 @@ const test1 = woodCalculator(0, 0, 1);
 console.log('you will need total' ,test1,'piece of wood');
 
 //  tinyFriend
-function tinyFriends(friendNames) {
-    var smallest = friendNames[0];
-    for (var i = 0; i < friendNames.length; i++) {
-        var currentNumber = friendNames[i];
-        if (currentNumber < smallest) {
-            smallest = currentNumber;
+function tinyFriend(friend) {
+    var smallName = Infinity;
+    var tinyName;
+    for (var i = 0; i < friend.length; i++) {
+        if (friend[i].length < smallName) {
+            smallName = friend[i].length;
+            tinyName = friend[i];
         }
     }
-    return smallest;
-}
-var smallestNumber = tinyFriends([22, 56, 88, 3, 88, 16,]);
-console.log(smallestNumber, 'is the tiniest friend');
+    return tinyName;
+ }
 
 // brickCalculator
 function brickCalculator(floor) {
